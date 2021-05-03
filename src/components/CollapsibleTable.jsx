@@ -55,31 +55,12 @@ function Row(props) {
   );
 }
 
-Row.propTypes = {
-  row: PropTypes.shape({
-    calories: PropTypes.number.isRequired,
-    carbs: PropTypes.number.isRequired,
-    fat: PropTypes.number.isRequired,
-    history: PropTypes.arrayOf(
-      PropTypes.shape({
-        amount: PropTypes.number.isRequired,
-        customerId: PropTypes.string.isRequired,
-        date: PropTypes.string.isRequired,
-      }),
-    ).isRequired,
-    name: PropTypes.string.isRequired,
-    price: PropTypes.number.isRequired,
-    protein: PropTypes.number.isRequired,
-  }).isRequired,
-};
-
-
 
 export const CollapsibleTable = (props) => {
 
   const feed = useFeed()
   return (
-    <TableContainer component={Paper}>
+
       <Table aria-label="collapsible table">
         <TableHead>
           <TableRow>
@@ -94,6 +75,6 @@ export const CollapsibleTable = (props) => {
           ))}
         </TableBody>
       </Table>
-    </TableContainer>
+
   );
 }

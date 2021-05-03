@@ -1,20 +1,23 @@
-import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-
-
+import {useIcons} from './IconStore'
+import './FriendsGrid.css';
 export default function FriendsGrid(props) {
 
 
-  
+    const icons = useIcons()
+    console.log(icons)
     return (
-        <Container>
+        icons.length<1?<div>"Loading"</div>:
+        <div>
             <Row>
-                {Array.from(Array(10).keys()).map((item) => item)}
+                {Array.from(Array(10).keys()).map((item) => (<img key={item} src={icons[item]}></img>))}
             </Row>
             <Row>
-                {Array.from(Array(7).keys()).map((item) => item)}
+                {Array.from(Array(7).keys()).map((item) => (<img key={item} src={icons[item]}></img>))}
             </Row>
-      </Container>
+            <Row>
+
+            </Row>
+      </div>
     );
   }

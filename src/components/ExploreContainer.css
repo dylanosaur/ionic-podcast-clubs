@@ -5,6 +5,8 @@
   right: 0;
   top: 50%;
   transform: translateY(-50%);
+  margin: 2px;
+  padding: 2px
 }
 
 .container strong {
@@ -21,12 +23,18 @@
 
 .container a {
   text-decoration: none;
+  display: flex;  
+  flex-wrap: wrap;
 }
 
-.col-example{
-  padding: 1rem;
+.col-example {
+  padding: 2px;
   background-color: #33b5e5;
-  border: 2px solid #fff;
-  color: #fff;
+  border: 2px solid rgb(8, 37, 201);
   text-align: center;
 }
+
+.secondary {
+  margin: 6px
+}
+

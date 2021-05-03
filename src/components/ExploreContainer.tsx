@@ -15,10 +15,10 @@ const ExploreContainer: React.FC<ContainerProps> = () => {
       {(page=='login')?
         <Login submitFunction={setPage}/>:
         <div>
-          <div className="container d-inline-flex p-2 col-example">
+          <div className="d-inline-flex col-example secondary">
             <CollapsibleTable/>
           </div>
-          <div className="container d-inline-flex p-2 col-example">
+          <div className="d-inline-flex col-example secondary">
             <FriendsGrid />
           </div>
         </div>

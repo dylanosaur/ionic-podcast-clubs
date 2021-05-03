@@ -7,4 +7,21 @@
       margin: 0 auto;
       max-width: 320px;
     }
+
+    #email {
+      margin: 4px;
+      padding: 4px;
+      text-align: center;
+    }
+
+    #password {
+      margin: 4px;
+      padding: 4px;
+      text-align: center;
+    }
+
+    #login-button {
+      font-size: 2rem;
+
+    }
   }
