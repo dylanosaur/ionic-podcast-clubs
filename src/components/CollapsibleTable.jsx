@@ -1,20 +1,20 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+
 import { makeStyles } from '@material-ui/core/styles';
-import Box from '@material-ui/core/Box';
+
 import Collapse from '@material-ui/core/Collapse';
 import IconButton from '@material-ui/core/IconButton';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
-import TableContainer from '@material-ui/core/TableContainer';
+
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
-import Typography from '@material-ui/core/Typography';
-import Paper from '@material-ui/core/Paper';
+
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import {useFeed} from './FeedStore'
+import './CollapsibleTable.css'
 
 const useRowStyles = makeStyles({
   root: {
@@ -46,7 +46,6 @@ function Row(props) {
       <TableRow>
         <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
           <Collapse in={open} timeout="auto" unmountOnExit>
-            <p>Here is additional information or posts about the thing you're interested in.</p>
             <p>{row.text}</p>
           </Collapse>
         </TableCell>
@@ -57,24 +56,21 @@ function Row(props) {
 
 
 export const CollapsibleTable = (props) => {
-
+  const {items, tableName} = props
   const feed = useFeed()
   return (
-
-      <Table aria-label="collapsible table">
+      <Table aria-label="collapsible table" className='feed'>
         <TableHead>
           <TableRow>
             <TableCell />
-            <TableCell>News Feed</TableCell>
-            <TableCell align="right">More Details</TableCell>
+            <TableCell>{tableName||"News Feed"}</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {feed.map((row) => (
+          {items?items:feed.map((row) => (
             <Row key={row.name} row={row} />
           ))}
         </TableBody>
       </Table>
-
   );
 }

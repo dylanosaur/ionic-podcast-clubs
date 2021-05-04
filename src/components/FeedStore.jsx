@@ -2,14 +2,14 @@ import {createStore} from "reusable";
 import {useState} from 'react';
 
 
-function createData(name) {
-    return {name};
+function createData(name, text) {
+    return {name, text};
   }
 
 const rows = [
-    createData('JRE'),
-    createData('Startalk'),
-    createData('Radiolab'),
+    createData('JRE', 'Lots of conspiracy stuff'),
+    createData('Startalk', 'NDGT and guests'),
+    createData('Radiolab', 'Some art and some science'),
   ];
 
 

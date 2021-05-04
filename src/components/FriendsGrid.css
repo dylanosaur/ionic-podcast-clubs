@@ -1,4 +1,6 @@
 div > img {
     max-width: 10%;
-    max-height: 10%
+    max-height: 10%;
+    min-width: 120px;
+    min-height: 120px;
 }

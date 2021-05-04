@@ -21,7 +21,7 @@ export default function Login(props) {
     <div className="Login">
       <Form onSubmit={handleSubmit}>
         <Form.Group size="lg" controlId="email">
-          <Form.Label>Email</Form.Label>
+          <div>{"username"}</div>
           <Form.Control
             autoFocus
             type="email"
@@ -29,17 +29,21 @@ export default function Login(props) {
             onChange={(e) => setEmail(e.target.value)}
           />
         </Form.Group>
+
         <Form.Group size="lg" controlId="password">
-          <Form.Label>Password</Form.Label>
+          <div>{"password"}</div>
           <Form.Control
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
         </Form.Group>
-        <Button block size="lg" type="submit" disabled={!validateForm()} id="login-button">
-          Login
-        </Button>
+        <div className='button'>
+          <Button block size="lg" type="submit" disabled={!validateForm()} id="login-button">
+            Login
+          </Button>
+        </div>
+
       </Form>
     </div>
   );
