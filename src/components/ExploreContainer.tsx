@@ -3,6 +3,9 @@ import {useState} from 'react'
 import {CollapsibleTable} from './CollapsibleTable'
 import Login from './Login'
 import FriendsGrid from './FriendsGrid'
+
+import { Navbar } from 'react-bootstrap';
+
 interface ContainerProps { }
 
 const ExploreContainer: React.FC<ContainerProps> = () => {
@@ -12,6 +15,8 @@ const ExploreContainer: React.FC<ContainerProps> = () => {
 
   return (
     <div className="container">
+      <Navbar bg="light" expand="lg">{"testing"}</Navbar>
+      {"This is the homepage!"}
       {(page=='login')?
         <Login submitFunction={setPage}/>:
         <div>
@@ -19,7 +24,7 @@ const ExploreContainer: React.FC<ContainerProps> = () => {
             <CollapsibleTable/>
           </div>
           <div className="d-inline-flex col-example secondary">
-            <FriendsGrid />
+            {"Friends"} <FriendsGrid />
           </div>
         </div>
       }

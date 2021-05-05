@@ -18,8 +18,12 @@
       margin: 4px;
       padding: 4px;
       text-align: center;
+      color: black;
     }
 
+    .labels {
+      color: white;
+    }
   /* .Login > form > div.button{
       border: 2px;
       border: 2px solid rgb(8, 37, 201);

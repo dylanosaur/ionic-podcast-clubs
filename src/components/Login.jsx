@@ -21,7 +21,7 @@ export default function Login(props) {
     <div className="Login">
       <Form onSubmit={handleSubmit}>
         <Form.Group size="lg" controlId="email">
-          <div>{"username"}</div>
+          <div className="labels">{"username"}</div>
           <Form.Control
             autoFocus
             type="email"
@@ -31,7 +31,7 @@ export default function Login(props) {
         </Form.Group>
 
         <Form.Group size="lg" controlId="password">
-          <div>{"password"}</div>
+          <div className="labels">{"password"}</div>
           <Form.Control
             type="password"
             value={password}
